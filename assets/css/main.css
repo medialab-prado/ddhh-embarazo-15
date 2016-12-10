@@ -2722,6 +2722,12 @@
 		}
 
 
+	.image img {
+    border-radius: 50%;
+    display: block;
+	}
+
+
 	article p {
     	max-width: 600px;
     	margin: 0 auto; 
