@@ -391,9 +391,9 @@
 <script type="text/javascript">
   $(function(){
     var ip, geoData;
-    $.get('http://jsonip.com/', function(r){
+    $.get('https://jsonip.com/', function(r){
       ip = r.ip;
-      $.get('http://freegeoip.net/json/' + r.ip, function(s){
+      $.get('https://freegeoip.net/json/' + r.ip, function(s){
         geoData = s;
         $.get('assets/frases_provincias.csv', function(csvData){
           var csv = $.csv.toObjects(csvData);
