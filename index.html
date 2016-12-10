@@ -90,7 +90,8 @@
 				<div id="intro-wrapper" class="wrapper style1">
 					<div class="title">Introducción</div>
 					<section id="intro" class="container">
-						<p class="style1">Entre 2007 y 2014 ha habido más de 29.000 nacimientos de madres de 17 años o menos</p>
+						<!-- p class="style1">Entre 2007 y 2014 ha habido más de 29.000 nacimientos de madres de 17 años o menos</p -->
+						<p class="style1" id="placeholder"></p>
 						<p class="style2">
 							Cada día nacen en España ocho niños<br class="mobile-hide" /> de madres menores
 							<!-- Salto de linea para desktop
@@ -117,7 +118,7 @@
 						<!-- Image -->
 						<!--	<a href="#" class="image featured">
 								<img src="images/pic01.jpg" alt="" />
-							</a>--> 
+							</a>-->
 
 						<iframe width="100%" height="520" frameborder="0" src="https://cartonacho.carto.com/builder/f25df016-be25-11e6-8472-0ee66e2c9693/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
@@ -385,6 +386,31 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+
+<script type="text/javascript">
+  $(function(){
+    var ip, geoData;
+    $.get('http://jsonip.com/', function(r){
+      ip = r.ip;
+      $.get('http://freegeoip.net/json/' + r.ip, function(s){
+        geoData = s;
+        $.get('assets/frases_provincias.csv', function(csvData){
+          var csv = $.csv.toObjects(csvData);
+          var row;
+          csv.forEach(function(r){
+            if(r.PROVINCIA === s.region_name)
+              row = r;
+          });
+          if(row === null)
+            row = csv[29];
+          var sentence = "Entre 2007 y 2014, en "+row.PROVINCIA+" hubo "+row.ALUMBRAMIENTOS+" alumbramientos de madres de menos de 17 años. El "+parseFloat(row.EXTRANJERAS).toFixed(1)+"% eran extranjeras."
+          $('#placeholder').html(sentence);
+        });
+      });
+    });
+  });
+</script>
 
 	</body>
 </html>
