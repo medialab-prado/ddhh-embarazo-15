@@ -387,9 +387,19 @@
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/accounting.js/0.4.1/accounting.min.js"></script>
 
 <script type="text/javascript">
   $(function(){
+    // Settings object that controls default parameters for library methods:
+    accounting.settings = {
+      number: {
+        precision : 0,
+        thousand: ".",
+        decimal : ","
+      }
+    }
+
     var ip, geoData;
     $.get('https://jsonip.com/', function(r){
       ip = r.ip;
@@ -404,7 +414,7 @@
           });
           if(row === null)
             row = csv[29];
-          var sentence = "Entre 2007 y 2014, en "+row.PROVINCIA+" hubo "+row.ALUMBRAMIENTOS+" alumbramientos de madres de menos de 17 años. El "+parseFloat(row.EXTRANJERAS).toFixed(1)+"% eran extranjeras."
+          var sentence = "Entre 2007 y 2014, en "+row.PROVINCIA+" hubo "+accounting.formatNumber(row.ALUMBRAMIENTOS)+" alumbramientos de madres de menos de 17 años. El "+accounting.formatNumber(parseFloat(row.EXTRANJERAS), 1)+"% eran extranjeras."
           $('#placeholder').html(sentence);
         });
       });
