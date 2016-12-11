@@ -2738,10 +2738,11 @@
 	}
 
 	.article-header {
+		max-width: 600px;
+		text-align: left;
     	margin: 0 auto; 
-    	padding-bottom: 2rem;
-    	font-size: 1.3em;
-		}
+    	font-size: 1.1em;
+	}
 
 	article p {
     	max-width: 600px;
@@ -2826,11 +2827,8 @@
 		box-shadow: inset 0px 0px 2px 0px #606167;
 	}
 	.box h2.chart-headline {
-		position: absolute;
-		margin-bottom: 0;
+		margin: 0 auto;
+		max-width: 850px;
+		padding-bottom: 1rem;
 		text-align: center;
-		margin-left: auto;
-		margin-right: auto;
-		left: 0;
-		right: 0;
 	}
