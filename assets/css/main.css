@@ -1876,21 +1876,19 @@
 			.feature-list h3 {
 				margin: 0 0 0.75em 0;
 				font-size: 1.15em;
-				letter-spacing: 0.05em;
-				margin-top: -0.35em;
 			}
 
 				.feature-list h3:before {
 					width: 64px;
 					height: 64px;
 					line-height: 64px;
-					margin-right: 0.75em;
+					margin-right: 0.25em;
 					font-size: 32px;
 					top: 0.2em;
 				}
 
 			.feature-list p {
-				margin: 0 0 0 5em;
+				margin: 0 0 0 0em;
 			}
 
 			.feature-list.small h3:before {
