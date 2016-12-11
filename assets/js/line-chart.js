@@ -110,6 +110,14 @@ d3.csv("assets/data.csv", type, function(error, data) {
         .attr("class", "legend-text")
         .text("nacimientos / 1.000 hab.")
         
+    svg.append("text")
+        .attr("x", x(parseTime(2014)))
+        .attr("text-anchor", "end")
+        .attr("y", y(2.5))
+        .attr("dy", 5)
+        .attr("class", "legend-text legend-spain")
+        .text("ESPAÑA")
+        
     var focus = svg.append("g")
         .attr("transform", "translate(-100,-100)")
         .attr("class", "focus")
@@ -180,6 +188,9 @@ d3.csv("assets/data.csv", type, function(error, data) {
                 .attr("y", y(6000))
                 .text("nacimientos")
                 
+            svg.select(".legend-spain")
+                .style("opacity", 0)
+                
         } else {
             y.domain([0, 7.8])
             
@@ -190,6 +201,11 @@ d3.csv("assets/data.csv", type, function(error, data) {
                 .duration(1000)
                 .attr("y", y(7))
                 .text("nacimientos / 1000 hab.")
+                
+            svg.select(".legend-spain")
+                .transition()
+                .duration(1000)
+                .style("opacity", 1)
         }
         
         svg.selectAll(".line")
@@ -235,6 +251,10 @@ d3.csv("assets/data.csv", type, function(error, data) {
             .data(voronoi.polygons(d3.merge(nest.map(function(d) { return d.values }))))
             .attr("d", function(d) { return d ? "M" + d.join("L") + "Z" : null })
             
+        svg.select("legend-spain")
+            .attr("x", x(parseTime(2014)))
+            .attr("y", y(2.5))
+        
         yAxis.tickSize(-width)
 
         d3.select(".axis--y")

@@ -2774,6 +2774,9 @@
 		font-size: 12px;
 		fill: #6f6669;
 	}
+	.legend-spain {
+		fill: #cc3333;
+	}
 	.domain {
 	    display: none;
 	}
