@@ -1595,7 +1595,7 @@
 			}
 
 			.wrapper.style3 .image {
-				border: solid 10px #fff;
+				/*border: solid 10px #fff;*/
 			}
 
 	#header-wrapper {
@@ -2727,6 +2727,16 @@
     display: block;
 	}
 
+	.image-testimonio img {
+    border-radius: 50%;
+    float: left;
+	}
+
+	.article-header {
+    	margin: 0 auto; 
+    	padding-bottom: 2rem;
+    	font-size: 1.3em;
+		}
 
 	article p {
     	max-width: 600px;
