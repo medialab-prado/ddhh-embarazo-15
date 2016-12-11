@@ -1723,6 +1723,12 @@
 		border-radius: 0.35em;
 		box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
 	}
+	#intro > .style2.small-font {
+		font-size: 1.2em;
+	    max-width: 500px;
+	    padding: 1em;
+	    margin: 0 auto;
+	}
 
 		#intro > .style2 a {
 			color: inherit;
@@ -2122,6 +2128,7 @@
 					font-size: 1.1em;
 					width: 48em;
 					margin: 0 auto;
+					padding-bottom: 2rem;
 				}
 
 		/* Features */
