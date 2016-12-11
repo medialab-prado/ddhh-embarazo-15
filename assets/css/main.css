@@ -1075,7 +1075,7 @@
 	body, input, textarea, select {
 		font-family: 'Georgia', serif;
 		font-weight: 400;
-		color: #919499;
+		color: #333;
 	}
 
 	body.is-loading * {
@@ -2742,6 +2742,91 @@
     	max-width: 600px;
     	margin: 0 auto; 
     	padding-bottom: 2rem;
-		}
-
-		
+	}
+	
+	/* Line chart */
+	.js-line-chart {
+		position: relative;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+		font-family: "Work Sans", "Helvetica Neue", "Helvetica", "sans-serif";
+	}
+	.js-line-chart svg {
+		margin-bottom: 0.5rem;
+	}
+	.focus text {
+		font-size: 14px;
+	}
+	.focus circle {
+		fill: #6f6669;
+	}
+	.axis text {
+		font-size: 13px;
+		fill: #6f6669;
+	    font-family: "Work Sans", "Helvetica Neue", "Helvetica", "sans-serif";
+	}
+	.legend-text {
+		font-size: 12px;
+		fill: #6f6669;
+	}
+	.domain {
+	    display: none;
+	}
+	.tick line {
+	    stroke: rgb(230,230,230);
+	    stroke-dasharray: 2 2;
+	}
+	.line {
+	    fill: none;
+	    stroke: #6f6669;
+	    stroke-width: 2px;
+	    opacity: 0.1;
+	}
+	.line.espana {
+	    stroke-width: 2;
+	    stroke: #cc3333;
+	    opacity: 1;
+	}
+	.voronoi path {
+	    fill: none;
+	    pointer-events: all;
+	}
+	.line--hover {
+	    opacity: 1;
+	}
+	.focus text {
+	    text-anchor: middle;
+	    text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+	}
+	.btn-group {
+		text-align: center;
+	}
+	.btn-group .button {
+		padding: 0 1em 0 1em;
+		font-size: 0.8em;
+		letter-spacing: 0;
+		text-transform: none;
+		font-weight: 400;
+		line-height: 3em;
+		height: 3em;
+		border-radius: 0;
+		border-top-right-radius: 0;
+	}
+	.btn-group .active {
+		z-index: 2;
+		color: #333;
+		background-color: #e6e6e6;
+		border-color: #adadad;
+		background-image: none;
+		outline: 0;
+		box-shadow: inset 0px 0px 2px 0px #606167;
+	}
+	.box h2.chart-headline {
+		position: absolute;
+		margin-bottom: 0;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+	}
