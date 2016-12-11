@@ -2754,7 +2754,7 @@
 	.js-line-chart {
 		position: relative;
 		margin-bottom: 2rem;
-		font-family: "Work Sans", "Helvetica Neue", "Helvetica", "sans-serif";
+		font-family: "Helvetica Neue", "Helvetica", "sans-serif";
 	}
 	.js-line-chart svg {
 		margin-bottom: 0.5rem;
@@ -2768,7 +2768,7 @@
 	.axis text {
 		font-size: 13px;
 		fill: #6f6669;
-	    font-family: "Work Sans", "Helvetica Neue", "Helvetica", "sans-serif";
+	    font-family: "Helvetica Neue", "Helvetica", "sans-serif";
 	}
 	.legend-text {
 		font-size: 12px;
