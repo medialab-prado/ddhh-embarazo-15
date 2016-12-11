@@ -2696,12 +2696,13 @@
 
 	.destacado {
 		float:left;
-		color:#FFF;
-		background-color:#BBBBBB;
+		color:#333;
+		background-color:rgb(240,240,240);
 		width:33%;
+		border-radius: 4px;
 		font-size:15px;
-		margin-right:10px;
-		padding:10px;
+		margin-right:2rem;
+		padding:20px;
 		}
 
 	.destacado p {
@@ -2714,10 +2715,9 @@
     	text-align: left;
     	font-size: 150%;
     	padding-left: 1em;
+		margin-bottom: 1em;
     	border-left: 2px solid #35374b;
 		}	
-
-
 
 
 	.quote:before {
@@ -2747,7 +2747,7 @@
 	article p {
     	max-width: 600px;
     	margin: 0 auto; 
-    	padding-bottom: 2rem;
+    	padding-bottom: 1.5rem;
 	}
 	
 	/* Line chart */
@@ -2831,4 +2831,7 @@
 		max-width: 850px;
 		padding-bottom: 1rem;
 		text-align: center;
+	}
+	.mb2 {
+		margin-bottom: 2rem !important;
 	}
