@@ -108,7 +108,7 @@ d3.csv("assets/data.csv", type, function(error, data) {
         .attr("y", y(7))
         .attr("dy", 5)
         .attr("class", "legend-text")
-        .text("nacimientos / 1000 hab.")
+        .text("nacimientos / 1.000 hab.")
         
     var focus = svg.append("g")
         .attr("transform", "translate(-100,-100)")

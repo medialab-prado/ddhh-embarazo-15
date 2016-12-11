@@ -1794,12 +1794,12 @@
 			}
 
 			header.style1 {
-				padding: 3em 0 3em 0;
+				padding: 1em 0 0 0;
 			}
 
 				header.style1 h2 {
 					font-size: 2em;
-					letter-spacing: 0.075em;
+					letter-spacing: 0em;
 					line-height: 1.5em;
 				}
 
@@ -2752,7 +2752,6 @@
 	/* Line chart */
 	.js-line-chart {
 		position: relative;
-		margin-top: 2rem;
 		margin-bottom: 2rem;
 		font-family: "Work Sans", "Helvetica Neue", "Helvetica", "sans-serif";
 	}
