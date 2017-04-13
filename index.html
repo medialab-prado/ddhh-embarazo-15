@@ -433,7 +433,7 @@
             if(r.PROVINCIA === s.region_name)
               row = r;
           });
-          if(row === null || row == udefined)
+          if(row === null || row == undefined)
             row = csv[29];
           var sentence = "Entre 2007 y 2014, en "+row.PROVINCIA+" hubo "+accounting.formatNumber(row.ALUMBRAMIENTOS)+" alumbramientos de madres de menos de 17 años. El "+accounting.formatNumber(parseFloat(row.EXTRANJERAS), 1)+"% eran extranjeras."
           $('#placeholder').html(sentence);
